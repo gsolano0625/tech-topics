@@ -1,4 +1,4 @@
-### Implementing Object-Oriented Programming in Go: A Banking Example
+# Implementing Object-Oriented Programming in Go: A Banking Example
 
 Object-Oriented Programming (OOP) is a popular paradigm that organizes software design around data, or objects, rather than functions and logic. In Go, although not a purely object-oriented language, we can still apply OOP principles effectively. 
 

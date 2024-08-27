@@ -1,4 +1,4 @@
-### Understanding Object-Oriented Programming in Python: A Banking Example
+# Understanding Object-Oriented Programming in Python: A Banking Example
 
 Object-Oriented Programming (OOP) is a programming paradigm that organizes software design around data, or objects, rather than functions and logic. Python, being an object-oriented language, provides robust support for OOP, allowing developers to create modular, reusable, and maintainable code. 
 
