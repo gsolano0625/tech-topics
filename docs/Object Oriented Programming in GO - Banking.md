@@ -1,8 +1,17 @@
 # Implementing Object-Oriented Programming in Go: A Banking Example
 
-Object-Oriented Programming (OOP) is a popular paradigm that organizes software design around data, or objects, rather than functions and logic. In Go, although not a purely object-oriented language, we can still apply OOP principles effectively. 
+Object-Oriented Programming (OOP) is a popular paradigm that organizes software design around data, or objects, rather than functions and logic. 
+In Go, although not a purely object-oriented language, we can still apply OOP principles effectively. 
 
-In this article, we’ll explore how to implement OOP concepts in Go by building a simple banking system.
+#### Understanding Go's Philosophy
+
+Go, often referred to as Golang, was designed with simplicity and efficiency in mind. The creators of Go aimed to build a language that was easy to understand and productive to work with. As a result, Go avoids some of the complexities found in traditional OOP languages.
+
+In Go, there are no classes or inheritance, which are staples of classical OOP. 
+Instead, Go uses structs and interfaces to enable object-oriented design. 
+This approach aligns with Go's philosophy of favoring composition over inheritance, encouraging developers to build modular and reusable code without the complexities associated with deep inheritance hierarchies.
+
+Let's explore how to implement OOP concepts in Go by building a simple banking system.
 
 ### Understanding the Banking Example
 
@@ -59,7 +68,12 @@ func (a *Account) CheckBalance() float64 {
 
 ### Implementing Interfaces for Different Account Types
 
-Now, let’s introduce different types of accounts—say, a savings account and a checking account. We’ll use Go’s interfaces to achieve polymorphism, allowing us to treat different account types uniformly.
+Before we continue, let's understand Interfaces in Go
+
+In Go, an interface is a type that specifies a set of method signatures. A type implements an interface by implementing the methods defined in that interface. This implementation is implicit—meaning a type doesn't need to declare that it implements an interface; it just needs to have the required methods.
+
+Now, let’s introduce different types of accounts: Savings and Checking accounts. 
+We’ll use Go’s interfaces to achieve polymorphism, allowing us to treat different account types uniformly.
 
 ```go
 type BankAccount interface {
