@@ -1,8 +1,6 @@
 package com.pudito.banking;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.context.config.ResourceNotFoundException;
-//import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.pudito.banking.models.Account;
