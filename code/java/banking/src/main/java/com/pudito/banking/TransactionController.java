@@ -42,8 +42,8 @@ public class TransactionController {
         return new ResponseEntity<>(transactionService.transfer(fromAccountId, toAccountId, amount), HttpStatus.OK);
     }
 
-    //@GetMapping("/{accountId}")
-    //public ResponseEntity<List<Transaction>> getTransactionHistory(@PathVariable Long accountId) {
-    //    return new ResponseEntity<>(transactionService.getTransactionHistory(accountId), HttpStatus.OK);
-    //}
+    @GetMapping("/{accountId}")
+    public ResponseEntity<List<Transaction>> getTransactionHistory(@PathVariable Long accountId) {
+        return new ResponseEntity<>(transactionService.getTransactionHistory(accountId), HttpStatus.OK);
+    }
 }

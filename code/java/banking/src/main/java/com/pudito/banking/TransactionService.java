@@ -43,7 +43,7 @@ public class TransactionService {
         return transactionRepository.save(new Transaction(fromAccountId, "TRANSFER", amount, LocalDateTime.now()));
     }
 
-    //public List<Transaction> getTransactionHistory(Long accountId) {
-    //    return transactionRepository.findByAccountId(accountId);
-    //}
+    public List<Transaction> getTransactionHistory(Long accountId) {
+        return transactionRepository.findByAccountId(accountId);
+    }
 }

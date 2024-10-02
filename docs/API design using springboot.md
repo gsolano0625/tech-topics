@@ -48,6 +48,8 @@ First, initialize a Spring Boot project with the required dependencies:
 3. **Spring Security**: To add authentication and authorization.
 4. **H2 Database**: For easy in-memory database management during development.
 
+#### Maven
+
 ```xml
 <dependencies>
     <dependency>
@@ -68,6 +70,21 @@ First, initialize a Spring Boot project with the required dependencies:
         <scope>runtime</scope>
     </dependency>
 </dependencies>
+```
+
+#### Gradle - Groovy
+
+
+```groovy
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
 ```
 
 ### 4. Model Classes
