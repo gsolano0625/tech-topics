@@ -79,10 +79,8 @@ First, initialize a Spring Boot project with the required dependencies:
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 ```
@@ -122,6 +120,24 @@ public class Transaction {
     private LocalDateTime timestamp;
 
     // Constructors, getters, setters
+}
+```
+
+Now lets add the Repositories 
+
+```java
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
+}
+```
+
+and 
+
+```java
+public interface TransactionRepository extends JpaRepository<Transaction, Long> {
+
+    public List<Transaction> findByAccountId(Long accountId);
+
 }
 ```
 
@@ -288,6 +304,16 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InsufficientFundsException.class)
     public ResponseEntity<String> handleInsufficientFunds(InsufficientFundsException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+}
+```
+
+and 
+
+```java
+public class InsufficientFundsException extends RuntimeException {
+    public InsufficientFundsException(String message) {
+        super(message);
     }
 }
 ```
