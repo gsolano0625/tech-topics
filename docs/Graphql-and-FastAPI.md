@@ -1,4 +1,5 @@
 # Building a Banking API in Python Using GraphQL, FastAPI, and SQLite
+[Code](https://github.com/gsolano0625/tech-topics/tree/main/code/python/banking-graphql-fastapi)
 
 In this guide, we will build a simple banking API using Python, FastAPI, GraphQL (via `Strawberry`), and `SQLite` for persistent data storage. We'll extend the previous example where we had in-memory data and replace it with a persistent database using SQLite. This will allow us to store and retrieve data across API sessions.
 
