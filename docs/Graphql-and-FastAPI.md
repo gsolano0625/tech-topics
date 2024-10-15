@@ -341,5 +341,3 @@ mutation {
 ### Conclusion
 
 In this tutorial, we successfully built a banking API using FastAPI, GraphQL, and SQLite. We used SQLAlchemy as our ORM to interact with the database and `Strawberry` to implement the Graph
-
-- **TransactionType**: Represents a transaction between two accounts.
