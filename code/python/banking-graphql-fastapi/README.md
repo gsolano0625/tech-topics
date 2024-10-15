@@ -1,4 +1,5 @@
 # Banking API in Python Using GraphQL, FastAPI, and SQLite
+[Documenation](https://github.com/gsolano0625/tech-topics/blob/main/docs/Graphql-and-FastAPI.md)
 
 Install the dependencies:
 
