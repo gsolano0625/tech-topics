@@ -40,9 +40,9 @@ public class Transaction {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    //public void setId(Long id) {
+    //    this.id = id;
+    //}
 
     public Long getAccountId() {
         return accountId;
